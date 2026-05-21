@@ -153,9 +153,9 @@ def ensure_single_instance_app(NAME):
 
 	try:
 		if IS_WINDOWS:
-			_app_instance_lock = CreateMutex(None, False, f'Global\\NAME')  # pyright: ignore[reportPossiblyUnboundVariable, reportArgumentType]
-			lasterror = GetLastError()  # pyright: ignore[reportPossiblyUnboundVariable]
-			if lasterror == ERROR_ALREADY_EXISTS:  # pyright: ignore[reportPossiblyUnboundVariable]
+			_app_instance_lock = CreateMutex(None, False, f'Global\\{NAME}')
+			lasterror = GetLastError()
+			if lasterror == ERROR_ALREADY_EXISTS:
 				raise singleton.SingleInstanceException()
 		else:
 			_app_instance_lock = singleton.SingleInstance(flavor_id=f'{NAME}')

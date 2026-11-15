@@ -9,7 +9,7 @@ from pythonosc.dispatcher import Dispatcher, Handler
 
 class AsyncOSCDispatcher(Dispatcher):
 	"""OSC dispatcher that supports async handlers by dispatching
-	  them to an asyncio task group worker.
+	  them to an asyncio task group worker (also supports sync).
 
 	NOTE: There is only a single worker per mapped address, so if multiple messages are
 	    received for the same address while the handler is still processing, they will

@@ -5,6 +5,7 @@ Shared utilities for VR Python applications — async OSC dispatching, OpenVR in
 Used by:
 - [vr_audience_fire](https://github.com/Python1320/vr_audience_fire)
 - [vr_asmr_petting](https://github.com/Python1320/vr_asmr_petting)
+- [vrmh](https://github.com/Python1320/vrmh) (VR Microcontroller Haptics)
 
 ## Modules
 
